@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PT MAHA JAYA PRATAMA - Meta Ads & Creative Agency</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            min-height: 100vh;
+        }
+
+        /* Animated Background */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://ik.imagekit.io/xcl991/BG-Creative-1') center/cover no-repeat;
+            z-index: -2;
+            opacity: 0.15;
+            animation: bgMove 20s ease-in-out infinite alternate;
+        }
+
+        @keyframes bgMove {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
+        }
+
+        .gradient-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg,
+                rgba(102, 126, 234, 0.95) 0%,
+                rgba(118, 75, 162, 0.9) 50%,
+                rgba(240, 147, 251, 0.85) 100%);
+            z-index: -1;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 1rem 5%;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 1rem;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #ff6b6b, #feca57);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            transform: translateY(-2px);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 8rem 5% 4rem;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            animation: fadeInUp 1s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: #fff;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+        }
+
+        .hero h1 span {
+            display: block;
+            background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientShift 3s ease infinite;
+            background-size: 200% 200%;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: linear-gradient(90deg, #ff6b6b, #feca57);
+            color: #fff;
+            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 107, 107, 0.5);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            border: 2px solid #fff;
+            backdrop-filter: blur(5px);
+        }
+
+        .btn-secondary:hover {
+            background: #fff;
+            color: #764ba2;
+            transform: translateY(-3px);
+        }
+
+        /* Floating Elements */
+        .floating-shapes {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .shape {
+            position: absolute;
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+            opacity: 0.1;
+        }
+
+        .shape-1 {
+            width: 100px;
+            height: 100px;
+            background: #ff6b6b;
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .shape-2 {
+            width: 150px;
+            height: 150px;
+            background: #feca57;
+            top: 60%;
+            right: 15%;
+            animation-delay: 2s;
+        }
+
+        .shape-3 {
+            width: 80px;
+            height: 80px;
+            background: #48dbfb;
+            bottom: 30%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+
+        /* Services Section */
+        .services {
+            padding: 6rem 5%;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title h2 {
+            font-size: 3rem;
+            font-weight: 900;
+            color: #fff;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .section-title p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.7;
+        }
+
+        /* Meta Ads Section */
+        .meta-ads {
+            padding: 6rem 5%;
+            position: relative;
+        }
+
+        .meta-ads-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .meta-ads-text h2 {
+            font-size: 3rem;
+            font-weight: 900;
+            color: #fff;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .meta-ads-text p {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .meta-ads-features {
+            list-style: none;
+        }
+
+        .meta-ads-features li {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 0;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 500;
+        }
+
+        .meta-ads-features li::before {
+            content: '✓';
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(90deg, #ff6b6b, #feca57);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .meta-ads-visual {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 30px;
+            padding: 3rem;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+        }
+
+        .meta-ads-visual h3 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .meta-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            background: linear-gradient(90deg, #ff6b6b, #feca57);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Creative Section */
+        .creative {
+            padding: 6rem 5%;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+        }
+
+        .creative-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .creative-item {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.4s ease;
+        }
+
+        .creative-item:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        .creative-image {
+            height: 250px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+        }
+
+        .creative-content {
+            padding: 2rem;
+        }
+
+        .creative-content h4 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.8rem;
+        }
+
+        .creative-content p {
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.6;
+        }
+
+        /* About Section */
+        .about {
+            padding: 6rem 5%;
+        }
+
+        .about-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .company-highlight {
+            background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb, #ff6b6b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            background-size: 300% 300%;
+            animation: gradientText 3s ease infinite;
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 2rem;
+        }
+
+        @keyframes gradientText {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .about-content p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.9;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .detail-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .detail-item h4 {
+            color: #ff6b6b;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .detail-item p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1rem;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 6rem 5%;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+        }
+
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .contact-item {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .contact-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-item h4 {
+            color: #fff;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item p {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            padding: 3rem 5%;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #feca57;
+        }
+
+        footer p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+
+        /* Privacy & Terms Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 20px;
+            padding: 3rem;
+            max-width: 800px;
+            width: 100%;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: #fff;
+            font-size: 2rem;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .modal-close:hover {
+            background: #fff;
+            color: #764ba2;
+            transform: rotate(90deg);
+        }
+
+        .modal-content h2 {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .modal-content h3 {
+            color: #feca57;
+            font-size: 1.3rem;
+            margin: 1.5rem 0 1rem;
+        }
+
+        .modal-content p, .modal-content ul {
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .modal-content ul {
+            padding-left: 2rem;
+        }
+
+        .modal-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .meta-ads-content {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .meta-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-animation"></div>
+    <div class="gradient-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">PT <span>MAHA JAYA PRATAMA</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Beranda</a></li>
+            <li><a href="#services">Layanan</a></li>
+            <li><a href="#meta-ads">Meta Ads</a></li>
+            <li><a href="#creative">Kreatif</a></li>
+            <li><a href="#about">Tentang</a></li>
+            <li><a href="#contact">Kontak</a></li>
+        </ul>
+        <button class="mobile-menu-btn">☰</button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        <div class="hero-content">
+            <h1>
+                <span>PT MAHA JAYA PRATAMA</span>
+                Your Creative & Meta Ads Partner
+            </h1>
+            <p>
+                Kami adalah agency kreatif dan spesialis Meta Ads yang siap membantu bisnis Anda mencapai potensi maksimal melalui strategi periklanan digital yang inovatif dan hasil nyata.
+            </p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">Mulai Sekarang</a>
+                <a href="#services" class="btn btn-secondary">Pelajari Lebih</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="section-title">
+            <h2>Layanan Kami</h2>
+            <p>Menyediakan solusi kreatif dan strategi periklanan yang komprehensif untuk pertumbuhan bisnis Anda</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🎯</div>
+                <h3>Meta Ads Management</h3>
+                <p>Strategi periklanan Facebook dan Instagram yang terukur dengan targeting audiens yang presisi dan optimalisasi kampanye berkelanjutan.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🎬</div>
+                <h3>Video Production</h3>
+                <p>Produksi film, video komersial, dan konten televisi berkualitas tinggi untuk memperkuat brand awareness bisnis Anda.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🎨</div>
+                <h3>Creative Design</h3>
+                <p>Desain kreatif untuk materi iklan, branding, dan kampanye visual yang menarik perhatian target audiens.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📊</div>
+                <h3>Analytics & Reporting</h3>
+                <p>Pelaporan detail dan analisis kinerja kampanye untuk memastikan setiap rupiah investasi iklan Anda maksimal.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🎪</div>
+                <h3>MICE Events</h3>
+                <p>Penyelenggaraan pertemuan, konferensi, dan pameran profesional untuk kebutuhan bisnis dan corporate.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🚀</div>
+                <h3>Brand Strategy</h3>
+                <p>Strategi pengembangan brand yang menyeluruh untuk membangun identitas brand yang kuat dan berkesan.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meta Ads Section -->
+    <section class="meta-ads" id="meta-ads">
+        <div class="meta-ads-content">
+            <div class="meta-ads-text">
+                <h2>Dominate dengan Meta Ads</h2>
+                <p>
+                    PT MAHA JAYA PRATAMA membantu Anda menguasai platform Facebook dan Instagram Ads dengan strategi yang telah terbukti efektif untuk berbagai industri.
+                </p>
+                <p>
+                    Kami memahami bahwa setiap bisnis unik. Itulah sebabnya kami mengembangkan strategi periklanan yang disesuaikan dengan tujuan spesifik Anda.
+                </p>
+                <ul class="meta-ads-features">
+                    <li>Audiens targeting berbasis AI</li>
+                    <li>Creative testing & optimization</li>
+                    <li>Real-time campaign monitoring</li>
+                    <li>Detailed performance reporting</li>
+                    <li>ROI-focused strategies</li>
+                    <li>A/B testing berkelanjutan</li>
+                </ul>
+            </div>
+            <div class="meta-ads-visual">
+                <h3>Hasil Nyata</h3>
+                <div class="meta-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">300%</div>
+                        <div class="stat-label">Rata-rata ROAS</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Klien Puas</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">500K+</div>
+                        <div class="stat-label">Audience Reached</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Campaign Monitoring</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Creative Section -->
+    <section class="creative" id="creative">
+        <div class="section-title">
+            <h2>Kreativitas Tanpa Batas</h2>
+            <p>Kami mengubah ide menjadi konten yang memukau dan menghasilkan</p>
+        </div>
+        <div class="creative-showcase">
+            <div class="creative-item">
+                <div class="creative-image">📺</div>
+                <div class="creative-content">
+                    <h4>TV Commercials</h4>
+                    <p>Komposil iklan televisi yang berkualitas tinggi dengan cerita yang menginspirasi dan visual yang menawan.</p>
+                </div>
+            </div>
+            <div class="creative-item">
+                <div class="creative-image">📱</div>
+                <div class="creative-content">
+                    <h4>Digital Ads</h4>
+                    <p>Iklan digital yang kreatif untuk berbagai platform sosial media dengan format yang engaging dan shareable.</p>
+                </div>
+            </div>
+            <div class="creative-item">
+                <div class="creative-image">🎥</div>
+                <div class="creative-content">
+                    <h4>Corporate Videos</h4>
+                    <p>Video profil perusahaan dan dokumentasi yang profesional untuk kebutuhan branding dan komunikasi internal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-content">
+            <h2 class="company-highlight">PT MAHA JAYA PRATAMA</h2>
+            <p>
+                Kami adalah perusahaan kreatif dan advertising yang berbasis di Bandung, Jawa Barat. Dengan NIB 9299211000388966, kami telah melayani berbagai klien dari berbagai industri dengan komitmen untuk memberikan hasil terbaik.
+            </p>
+            <p>
+                Tim kami terdiri dari profesional berpengalaman di bidang periklanan, produksi video, desain kreatif, dan manajemen kampanye digital. Kami percaya bahwa kreativitas tanpa strategi adalah sia-sia, dan strategi tanpa kreativitas membosankan.
+            </p>
+            <div class="about-details">
+                <div class="detail-item">
+                    <h4>📍 Alamat</h4>
+                    <p>Jalan Taurus Nomor 37 A, Desa/Kelurahan Gumuruh, Kec. Batununggal, Kota Bandung, Jawa Barat 40275</p>
+                </div>
+                <div class="detail-item">
+                    <h4>📞 Telepon</h4>
+                    <p>082382466325</p>
+                </div>
+                <div class="detail-item">
+                    <h4>📧 Email</h4>
+                    <p>pt.mahajayapratama@gmail.com</p>
+                </div>
+                <div class="detail-item">
+                    <h4>📋 NIB</h4>
+                    <p>9299211000388966</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="section-title">
+            <h2>Hubungi Kami</h2>
+            <p>Siap untuk meningkatkan bisnis Anda? Mari berdiskusi!</p>
+        </div>
+        <div class="contact-content">
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <h4>Telepon</h4>
+                    <p>082382466325</p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <h4>Email</h4>
+                    <p>pt.mahajayapratama@gmail.com</p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <h4>Lokasi</h4>
+                    <p>Bandung, Jawa Barat</p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">⏰</div>
+                    <h4>Jam Operasional</h4>
+                    <p>Senin - Jumat<br>09:00 - 17:00 WIB</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="#" onclick="openModal('privacy')">Kebijakan Privasi</a>
+            <a href="#" onclick="openModal('terms')">Syarat & Ketentuan</a>
+        </div>
+        <p>&copy; 2024 PT MAHA JAYA PRATAMA. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Privacy Modal -->
+    <div class="modal" id="privacyModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('privacy')">×</button>
+            <h2>Kebijakan Privasi</h2>
+            <p><strong>PT MAHA JAYA PRATAMA</strong> ("Kami") berkomitmen untuk melindungi privasi dan kerahasiaan data pribadi Anda. Dokumen ini menjelaskan bagaimana Kami mengumpulkan, menggunakan, dan melindungi informasi pribadi Anda.</p>
+
+            <h3>1. Informasi yang Kami Kumpulkan</h3>
+            <p>Kami dapat mengumpulkan informasi berikut:</p>
+            <ul>
+                <li>Informasi identitas pribadi (nama, email, nomor telepon)</li>
+                <li>Informasi bisnis dan perusahaan</li>
+                <li>Data penggunaan website dan layanan</li>
+                <li>Informasi komunikasi antara Anda dan Kami</li>
+            </ul>
+
+            <h3>2. Penggunaan Informasi</h3>
+            <p>Kami menggunakan informasi yang dikumpulkan untuk:</p>
+            <ul>
+                <li>Menyediakan layanan yang Anda minta</li>
+                <li>Mengelola hubungan bisnis dengan Anda</li>
+                <li>Mengirimkan informasi mengenai layanan dan promosi</li>
+                <li>Menganalisis dan meningkatkan kualitas layanan Kami</li>
+            </ul>
+
+            <h3>3. Perlindungan Data</h3>
+            <p>Kami menerapkan langkah-langkah keamanan yang wajar untuk melindungi informasi pribadi Anda dari akses tidak sah, pengungkapan, perubahan, atau penghancuran. Data Anda disimpan dengan sistem keamanan yang berlaku.</p>
+
+            <h3>4. Pembagian Informasi</h3>
+            <p>Kami tidak akan menjual, menyewakan, atau membagikan informasi pribadi Anda kepada pihak ketiga tanpa persetujuan Anda, kecuali:</p>
+            <ul>
+                <li>Diperlukan oleh hukum atau peraturan yang berlaku</li>
+                <li>Untuk melindungi hak dan kepentingan Kami yang sah</li>
+                <li>Dengan pihak ketiga yang bekerja sama dengan Kami untuk menyediakan layanan</li>
+            </ul>
+
+            <h3>5. Akses dan Koreksi</h3>
+            <p>Anda berhak meminta akses, koreksi, atau penghapusan data pribadi Anda dengan menghubungi Kami melalui email: pt.mahajayapratama@gmail.com</p>
+
+            <h3>6. Kebijakan Cookies</h3>
+            <p>Website Kami dapat menggunakan cookies untuk meningkatkan pengalaman pengguna. Anda dapat mengatur browser Anda untuk menolak cookies.</p>
+
+            <h3>7. Perubahan Kebijakan</h3>
+            <p>Kami dapat memperbarui kebijakan privasi ini dari waktu ke waktu. Perubahan akan diberitahukan melalui website Kami.</p>
+
+            <h3>8. Kontak</h3>
+            <p>Untuk pertanyaan mengenai kebijakan privasi ini, silakan hubungi:</p>
+            <p><strong>PT MAHA JAYA PRATAMA</strong><br>
+            Email: pt.mahajayapratama@gmail.com<br>
+            Telepon: 082382466325</p>
+
+            <p><em>Kebijakan Privasi ini berlaku efektif sejak: Januari 2024</em></p>
+        </div>
+    </div>
+
+    <!-- Terms Modal -->
+    <div class="modal" id="termsModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('terms')">×</button>
+            <h2>Syarat & Ketentuan</h2>
+            <p>Selamat datang di website dan layanan <strong>PT MAHA JAYA PRATAMA</strong>. Dengan menggunakan website dan layanan Kami, Anda menyetujui syarat dan ketentuan berikut:</p>
+
+            <h3>1. Penerimaan Syarat & Ketentuan</h3>
+            <p>Dengan mengakses atau menggunakan website dan layanan PT MAHA JAYA PRATAMA, Anda menyetujui untuk terikat oleh syarat dan ketentuan ini. Jika Anda tidak menyetujui syarat dan ketentuan ini, harap jangan menggunakan website atau layanan Kami.</p>
+
+            <h3>2. Layanan Kami</h3>
+            <p>PT MAHA JAYA PRATAMA menyediakan layanan periklanan, kreatif, produksi video, dan MICE. Kami berhak mengubah, menangguhkan, atau menghentikan layanan kapan saja tanpa pemberitahuan sebelumnya.</p>
+
+            <h3>3. Kewajiban Pengguna</h3>
+            <p>Sebagai pengguna layanan Kami, Anda setuju untuk:</p>
+            <ul>
+                <li>Memberikan informasi yang akurat dan lengkap</li>
+                <li>Tidak menggunakan layanan untuk tujuan ilegal atau tidak sah</li>
+                <li>Tingkah laku yang sopan dan profesional</li>
+                <li>Menghormati hak kekayaan intelektual Kami</li>
+                <li>Tidak mencoba merusak atau mengganggu sistem Kami</li>
+            </ul>
+
+            <h3>4. Hak Kekayaan Intelektual</h3>
+            <p>Semua konten, desain, grafik, logo, dan materi di website ini adalah milik PT MAHA JAYA PRATAMA dan dilindungi oleh hak cipta dan hukum kekayaan intelektual lainnya. Anda tidak boleh menyalin, memodifikasi, atau mendistribusikan konten tanpa izin tertulis dari Kami.</p>
+
+            <h3>5. Pembayaran dan Biaya</h3>
+            <p>Untuk layanan berbayar, pembayaran dilakukan sesuai dengan ketentuan yang disepakati bersama. Kami berhak mengubah harga dan biaya layanan dengan pemberitahuan sebelumnya.</p>
+
+            <h3>6. Batasan Tanggung Jawab</h3>
+            <p>PT MAHA JAYA PRATAMA tidak bertanggung jawab atas:</p>
+            <ul>
+                <li>Kehilangan atau kerusakan data yang disebabkan oleh faktor di luar kendali Kami</li>
+                <li>Kerugian langsung atau tidak langsung akibat penggunaan layanan</li>
+                <li>Keterlambatan atau kegagalan layanan karena masalah teknis</li>
+            </ul>
+
+            <h3>7. Privasi dan Data Pribadi</h3>
+            <p>Penggunaan data pribadi Anda diatur oleh Kebijakan Privasi Kami. Dengan menggunakan layanan Kami, Anda menyetujui pengumpulan dan penggunaan data sesuai dengan kebijakan privasi.</p>
+
+            <h3>8. Penghentian</h3>
+            <p>Kami berhak menghentikan akses Anda ke layanan Kami jika Anda melanggar syarat dan ketentuan ini atau menggunakan layanan dengan cara yang merugikan Kami.</p>
+
+            <h3>9. Perubahan Syarat & Ketentuan</h3>
+            <p>Kami berhak mengubah syarat dan ketentuan ini kapan saja. Perubahan akan diberitahukan melalui website Kami. Penggunaan lanjutan layanan setelah perubahan berarti Anda menerima syarat dan ketentuan yang diperbarui.</p>
+
+            <h3>10. Hukum yang Berlaku</h3>
+            <p>Syarat dan ketentuan ini diatur oleh hukum Republik Indonesia. Setiap sengketa akan diselesaikan melalui pengadilan yang berwenang di wilayah hukum Indonesia.</p>
+
+            <h3>11. Kontak</h3>
+            <p>Untuk pertanyaan mengenai syarat dan ketentuan ini, silakan hubungi:</p>
+            <p><strong>PT MAHA JAYA PRATAMA</strong><br>
+            Email: pt.mahajayapratama@gmail.com<br>
+            Telepon: 082382466325<br>
+            Alamat: Jalan Taurus Nomor 37 A, Desa/Kelurahan Gumuruh, Kec. Batununggal, Kota Bandung, Jawa Barat 40275</p>
+
+            <p><em>Syarat & Ketentuan ini berlaku efektif sejak: Januari 2024</em></p>
+        </div>
+    </div>
+
+    <script>
+        // Modal Functions
+        function openModal(type) {
+            event.preventDefault();
+            if (type === 'privacy') {
+                document.getElementById('privacyModal').classList.add('active');
+            } else if (type === 'terms') {
+                document.getElementById('termsModal').classList.add('active');
+            }
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(type) {
+            if (type === 'privacy') {
+                document.getElementById('privacyModal').classList.remove('active');
+            } else if (type === 'terms') {
+                document.getElementById('termsModal').classList.remove('active');
+            }
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal on outside click
+        document.querySelectorAll('.modal').forEach(modal => {
+            modal.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    this.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.modal').forEach(modal => {
+                    modal.classList.remove('active');
+                });
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenuBtn.addEventListener('click', function() {
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            if (navLinks.style.display === 'flex') {
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '100%';
+                navLinks.style.left = '0';
+                navLinks.style.right = '0';
+                navLinks.style.background = 'rgba(255, 255, 255, 0.1)';
+                navLinks.style.backdropFilter = 'blur(10px)';
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.padding = '2rem';
+                navLinks.style.gap = '1rem';
+            }
+        });
+
+        // Add scroll effect to navbar
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.background = 'rgba(255, 255, 255, 0.2)';
+            } else {
+                navbar.style.background = 'rgba(255, 255, 255, 0.1)';
+            }
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.service-card, .creative-item, .detail-item, .contact-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
