@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syarat & Ketentuan - PT Maha Jaya Pratama</title>
+    <meta name="description" content="Syarat & Ketentuan PT Maha Jaya Pratama. Baca persyaratan layanan Meta Ads kami sebelum menggunakan layanan kami.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-navy: #0a192f;
+            --secondary-navy: #112240;
+            --accent-navy: #233554;
+            --light-navy: #30475e;
+            --gold-accent: #d4af37;
+            --white: #ffffff;
+            --light-gray: #f8f9fa;
+            --text-dark: #1a1a2e;
+            --text-light: #e6e6e6;
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.8;
+            color: var(--text-dark);
+            background: var(--light-gray);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header Styles */
+        header {
+            background: var(--primary-navy);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+            letter-spacing: 0.5px;
+        }
+
+        .logo span {
+            color: var(--gold-accent);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--gold-accent);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold-accent);
+            transition: var(--transition);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            padding: 4rem 2rem 6rem;
+        }
+
+        .content-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 3px solid var(--primary-navy);
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            color: var(--primary-navy);
+            margin-bottom: 1rem;
+        }
+
+        .page-header p {
+            color: var(--accent-navy);
+            font-size: 1.1rem;
+        }
+
+        .last-updated {
+            text-align: center;
+            color: var(--light-navy);
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        /* Content Sections */
+        h2 {
+            font-size: 1.75rem;
+            color: var(--primary-navy);
+            margin: 2.5rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--gold-accent);
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            color: var(--secondary-navy);
+            margin: 1.5rem 0 0.75rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--accent-navy);
+        }
+
+        ul {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+            color: var(--accent-navy);
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight {
+            color: var(--primary-navy);
+            font-weight: 600;
+        }
+
+        .warning {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-navy);
+            color: var(--white);
+            padding: 3rem 2rem 1rem;
+            margin-top: auto;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            color: var(--gold-accent);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-section p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold-accent);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--accent-navy);
+        }
+
+        .footer-bottom p {
+            color: var(--text-light);
+            font-size: 0.85rem;
+        }
+
+        /* Mobile Navigation */
+        .mobile-menu {
+            display: none;
+            background: var(--secondary-navy);
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            padding: 1rem 2rem;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-menu ul {
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .content-container {
+                padding: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .mobile-toggle {
+                display: block;
+                background: none;
+                border: none;
+                color: var(--white);
+                font-size: 1.5rem;
+                cursor: pointer;
+            }
+
+            .header-container nav {
+                display: none;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .mobile-toggle {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">PT <span>Maha Jaya Pratama</span></a>
+            <button class="mobile-toggle" onclick="toggleMobileMenu()">☰</button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="index.html#services">Layanan</a></li>
+                    <li><a href="index.html#why-us">Keunggulan</a></li>
+                    <li><a href="index.html#contact">Kontak</a></li>
+                    <li><a href="privacy.html">Privasi</a></li>
+                    <li><a href="terms.html">Syarat & Ketentuan</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="index.html" onclick="toggleMobileMenu()">Beranda</a></li>
+                <li><a href="index.html#services" onclick="toggleMobileMenu()">Layanan</a></li>
+                <li><a href="index.html#why-us" onclick="toggleMobileMenu()">Keunggulan</a></li>
+                <li><a href="index.html#contact" onclick="toggleMobileMenu()">Kontak</a></li>
+                <li><a href="privacy.html" onclick="toggleMobileMenu()">Privasi</a></li>
+                <li><a href="terms.html" onclick="toggleMobileMenu()">Syarat & Ketentuan</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="content-container">
+            <div class="page-header">
+                <h1>Syarat & Ketentuan</h1>
+                <p>Syarat dan Ketentuan Penggunaan Layanan PT Maha Jaya Pratama</p>
+            </div>
+
+            <div class="last-updated">
+                Terakhir diperbarui: Januari 2025
+            </div>
+
+            <h2>1. Penerimaan Syarat</h2>
+            <p>Selamat datang di <span class="highlight">PT Maha Jaya Pratama</span>. Dengan mengakses atau menggunakan layanan Meta Ads yang kami sediakan, Anda setuju untuk terikat oleh Syarat & Ketentuan ini. Jika Anda tidak setuju dengan bagian manapun dari syarat ini, harap jangan menggunakan layanan kami.</p>
+
+            <h2>2. Definisi</h2>
+            <ul>
+                <li><strong>"Kami" atau "Perusahaan":</strong> Merujuk pada PT Maha Jaya Pratama</li>
+                <li><strong>"Anda" atau "Klien":</strong> Merujuk pada pengguna layanan kami</li>
+                <li><strong>"Layanan":</strong> Merujuk pada layanan Meta Ads yang kami sediakan</li>
+                <li><strong>"Platform":</strong> Merujuk pada Facebook dan Instagram (Meta Platforms)</li>
+                <li><strong>"Kampanye":</strong> Merujuk pada iklan yang berjalan di platform Meta melalui layanan kami</li>
+            </ul>
+
+            <h2>3. Deskripsi Layanan</h2>
+            <p><span class="highlight">PT Maha Jaya Pratama</span> menyediakan layanan manajemen dan optimasi Meta Ads yang meliputi:</p>
+            <ul>
+                <li>Perencanaan dan strategi kampanye iklan</li>
+                <li>Manajemen dan optimasi kampanye Facebook Ads</li>
+                <li>Manajemen dan optimasi kampanye Instagram Ads</li>
+                <li>Audience targeting dan segmentasi</li>
+                <li>Analisis performa dan laporan rutin</li>
+                <li>Konsultasi strategi advertising</li>
+            </ul>
+
+            <h2>4. Kewajiban Klien</h2>
+            <p>Sebagai klien, Anda setuju untuk:</p>
+            
+            <h3>4.1. Informasi yang Akurat</h3>
+            <ul>
+                <li>Memberikan informasi yang benar, akurat, dan lengkap</li>
+                <li>Memperbarui informasi jika terdapat perubahan</li>
+                <li>Menyediakan aset iklan yang tidak melanggar hak kekayaan intelektual</li>
+            </ul>
+
+            <h3>4.2. Kepatuhan Kebijakan</h3>
+            <ul>
+                <li>Mematuhi semua kebijakan Meta Advertising</li>
+                <li>Memastikan produk/jasa yang dipromosikan legal di Indonesia</li>
+                <li>Tidak melanggar hukum atau regulasi yang berlaku</li>
+            </ul>
+
+            <h3>4.3. Pembayaran</h3>
+            <ul>
+                <li>Membayar biaya layanan sesuai dengan paket yang dipilih</li>
+                <li>Membayar biaya iklan langsung ke Meta sesuai penggunaan</li>
+                <li>Melunasi pembayaran tepat waktu sesuai invoice</li>
+            </ul>
+
+            <h2>5. Kewajiban Perusahaan</h2>
+            <p><span class="highlight">PT Maha Jaya Pratama</span> berkomitmen untuk:</p>
+            <ul>
+                <li>Menyediakan layanan dengan standar profesional</li>
+                <li>Mengelola kampanye dengan sebaik-baiknya</li>
+                <li>Memberikan laporan performa yang transparan</li>
+                <li>Merespons pertanyaan dan permintaan klien dengan cepat</li>
+                <li>Menjaga kerahasiaan informasi klien</li>
+                <li>Terus mengoptimalkan kampanye untuk hasil terbaik</li>
+            </ul>
+
+            <h2>6. Hak dan Kewajiban Terkait Platform Meta</h2>
+            
+            <h3>6.1. Kebijakan Meta</h3>
+            <p>Layanan kami tunduk pada kebijakan dan persyaratan Meta Platforms. Kami tidak bertanggung jawab atas:</p>
+            <ul>
+                <li>Penolakan atau pembatasan iklan oleh Meta</li>
+                <li>Penutupan akun iklan oleh Meta</li>
+                <li>Perubahan algoritma atau kebijakan Meta</li>
+                <li>Kendala teknis pada platform Meta</li>
+            </ul>
+
+            <h3>6.2. Akun Iklan</h3>
+            <ul>
+                <li>Klien bertanggung jawab atas akun iklan Meta mereka</li>
+                <li>Kami memerlukan akses Business Manager yang valid</li>
+                <li>Perubahan akses harus diberitahukan sebelumnya</li>
+                <li>Penghapusan akses secara sepihak dapat mengganggu layanan</li>
+            </ul>
+
+            <h2>7. Pembayaran dan Biaya</h2>
+
+            <h3>7.1. Biaya Layanan</h3>
+            <ul>
+                <li>Biaya layanan dikenakan sesuai paket yang dipilih</li>
+                <li>Biaya dapat berubah dengan pemberitahuan sebelumnya</li>
+                <li>Perubahan biaya tidak berlaku surut untuk kontrak yang aktif</li>
+            </ul>
+
+            <h3>7.2. Metode Pembayaran</h3>
+            <ul>
+                <li>Pembayaran dapat dilakukan melalui transfer bank</li>
+                <li>Invoice akan diterbitkan setiap bulan atau sesuai perjanjian</li>
+                <p>Keterlambatan pembayaran dapat mengakibatkan penangguhan layanan</p>
+            </ul>
+
+            <h3>7.3. Biaya Iklan</h3>
+            <ul>
+                <li>Biaya iklan dibayar langsung ke Meta</li>
+                <li>Biaya iklan di luar biaya layanan kami</li>
+                <li>Klien bertanggung jawab penuh atas budget iklan</li>
+            </ul>
+
+            <div class="warning">
+                <strong>Penting:</strong> Keterlambatan pembayaran lebih dari 14 hari dapat mengakibatkan penghentian layanan dan kewajiban pembayaran penuh.
+            </div>
+
+            <h2>8. Durasi dan Pengakhiran</h2>
+
+            <h3>8.1. Durasi Layanan</h3>
+            <ul>
+                <li>Minimum durasi layanan adalah 1 bulan</li>
+                <li>Kontrak berjalan secara bulanan atau sesuai perjanjian</li>
+                <li>Paket khusus mungkin memiliki durasi minimal yang berbeda</li>
+            </ul>
+
+            <h3>8.2. Pengakhiran oleh Klien</h3>
+            <ul>
+                <li>Klien dapat mengakhiri layanan dengan pemberitahuan 14 hari</li>
+                <li>Pembayaran untuk bulan berjalan tetap berlaku</li>
+                <li>Tidak ada pengembalian dana untuk biaya layanan yang telah dibayarkan</li>
+            </ul>
+
+            <h3>8.3. Pengakhiran oleh Perusahaan</h3>
+            <p><span class="highlight">PT Maha Jaya Pratama</span> berhak mengakhiri layanan jika:</p>
+            <ul>
+                <li>Klien melanggar syarat & ketentuan</li>
+                <li>Klien tidak melakukan pembayaran tepat waktu</li>
+                <li>Ada pelanggaran hukum atau regulasi</li>
+                <li>Layanan tidak dapat dilanjutkan karena alasan di luar kendali kami</li>
+            </ul>
+
+            <h2>9. Jaminan dan Penyangkalan</h2>
+
+            <h3>9.1. Jaminan</h3>
+            <p>Kami menjamin bahwa:</p>
+            <ul>
+                <li>Layanan akan disediakan dengan standar profesional</li>
+                <li>Kami akan melakukan upaya terbaik untuk mencapai tujuan kampanye</li>
+                <li>Kami akan memberikan laporan yang transparan</li>
+            </ul>
+
+            <h3>9.2. Penyangkalan</h3>
+            <ul>
+                <li>Kami tidak menjamin hasil tertentu dari kampanye iklan</li>
+                <li>Performa iklan bergantung pada berbagai faktor eksternal</li>
+                <li>Kami tidak bertanggung jawab atas kehilangan profit atau kerugian lainnya</li>
+                <li>Layanan disediakan "sebagaimana adanya" tanpa jaminan tambahan</li>
+            </ul>
+
+            <div class="warning">
+                <strong>Catatan:</strong> Hasil kampanye iklan dapat bervariasi dan dipengaruhi oleh faktor seperti budget, kompetisi, musim, dan perubahan algoritma Meta.
+            </div>
+
+            <h2>10. Kekayaan Intelektual</h2>
+            
+            <h3>10.1. Hak Klien</h3>
+            <ul>
+                <li>Klien mempertahankan kepemilikan atas konten dan aset iklan mereka</li>
+                <li>Data performa kampanye adalah milik klien</li>
+                <li>Strategi dan rekomendasi yang diberikan adalah untuk kepentingan klien</li>
+            </ul>
+
+            <h3>10.2. Hak Perusahaan</h3>
+            <ul>
+                <li><span class="highlight">PT Maha Jaya Pratama</span> mempertahankan hak atas metodologi dan pendekatan kami</li>
+                <li>Materi pelatihan dan dokumentasi internal adalah milik kami</li>
+                <li>Kami memiliki hak untuk menggunakan data anonim untuk peningkatan layanan</li>
+            </ul>
+
+            <h2>11. Kerahasiaan</h2>
+            <p>Kami berkomitmen menjaga kerahasiaan informasi klien:</p>
+            <ul>
+                <li>Informasi bisnis dan strategi tidak akan dibagikan ke pihak ketiga</li>
+                <li>Data klien dilindungi dengan standar keamanan yang ketat</li>
+                <li>Karyawan diwajibkan menandatangani perjanjian kerahasiaan</li>
+                <li>Informasi hanya akan dibagikan jika diwajibkan oleh hukum</li>
+            </ul>
+
+            <h2>12. Pembatasan Tanggung Jawab</h2>
+            <p>Dalam keadaan apa pun, <span class="highlight">PT Maha Jaya Pratama</span> tidak bertanggung jawab atas:</p>
+            <ul>
+                <li>Kerugian langsung atau tidak langsung dari penggunaan layanan</li>
+                <li>Kehilangan profit atau pendapatan</li>
+                <li>Kehilangan data atau informasi</li>
+                <li>Kerugian reputasi</li>
+                <li>Kerusakan sistem atau perangkat</li>
+            </ul>
+            <p>Tanggung jawab maksimal kami terbatas pada jumlah biaya layanan yang telah dibayarkan oleh klien.</p>
+
+            <h2>13. Ganti Rugi</h2>
+            <p>Klien setuju untuk mengganti rugi, membela, dan membebaskan <span class="highlight">PT Maha Jaya Pratama</span> dari:</p>
+            <ul>
+                <li>Klaim, tuntutan, atau gugatan dari pihak ketiga</li>
+                <li>Kerugian, biaya, atau pengeluaran yang timbul</li>
+                <li>Pelanggaran hukum atau hak pihak lain oleh klien</li>
+                <li>Isu terkait konten atau produk yang dipromosikan</li>
+            </ul>
+
+            <h2>14. Perubahan Syarat & Ketentuan</h2>
+            <p><span class="highlight">PT Maha Jaya Pratama</span> berhak mengubah Syarat & Ketentuan ini sewaktu-waktu. Perubahan akan:</p>
+            <ul>
+                <li>Diunggah di website kami</li>
+                <li>Diberitahukan melalui email (untuk perubahan signifikan)</li>
+                <li>Berlaku setelah 7 hari dari pemberitahuan</li>
+            </ul>
+            <p>Penggunaan layanan yang berkelanjutan dianggap sebagai persetujuan terhadap perubahan.</p>
+
+            <h2>15. Ketentuan Khusus</h2>
+
+            <h3>15.1. Force Majeure</h3>
+            <p>Kami tidak bertanggung jawab atas kegagalan atau keterlambatan dalam melaksanakan kewajiban yang disebabkan oleh kejadian di luar kendali kami, termasuk tetapi tidak terbatas pada bencana alam, perang, pemogokan, atau kendala teknis eksternal.</p>
+
+            <h3>15.2. Pemisahan</h3>
+            <p>Jika bagian manapun dari Syarat & Ketentuan ini ditemukan tidak valid atau tidak dapat diberlakukan, bagian tersebut akan dipisahkan dan bagian lainnya tetap berlaku sepenuhnya.</p>
+
+            <h3>15.3. Pengabaian</h3>
+            <p>Kegagalan kami untuk menegakkan bagian manapun dari Syarat & Ketentuan ini tidak dianggap sebagai pengabaian hak kami untuk menegakkan bagian tersebut di kemudian hari.</p>
+
+            <h3>15.4. Hukum yang Berlaku</h3>
+            <p>Syarat & Ketentuan ini diatur oleh hukum Republik Indonesia. Sengketa akan diselesaikan melalui negosiasi terlebih dahulu, dan jika tidak mencapai kesepakatan, akan dibawa ke pengadilan yang berwenang di Indonesia.</p>
+
+            <h2>16. Hubungi Kami</h2>
+            <p>Jika Anda memiliki pertanyaan atau membutuhkan klarifikasi mengenai Syarat & Ketentuan ini, silakan hubungi kami:</p>
+            <ul>
+                <li>Email: legal@mahajayapratama.co.id</li>
+                <li>Telepon: +62 XXX XXX XXXX</li>
+                <li>Alamat: Kantor PT Maha Jaya Pratama</li>
+            </ul>
+
+            <h2>17. Persetujuan</h2>
+            <p>Dengan menggunakan layanan <span class="highlight">PT Maha Jaya Pratama</span>, Anda menyatakan bahwa Anda:</p>
+            <ul>
+                <li>Telah membaca, memahami, dan menyetujui Syarat & Ketentuan ini</li>
+                <li>Memiliki wewenang untuk menggunakan layanan atas nama bisnis Anda</li>
+                <li>Setuju untuk mematuhi semua persyaratan yang tercantum</li>
+            </ul>
+
+            <div style="margin-top: 3rem; padding: 2rem; background: var(--light-gray); border-radius: 8px; text-align: center;">
+                <p style="font-weight: 600; color: var(--primary-navy); font-size: 1.1rem;">
+                    Terima kasih telah mempercayakan layanan Meta Ads Anda kepada PT Maha Jaya Pratama
+                </p>
+                <p style="margin-top: 1rem;">Kami berkomitmen untuk memberikan layanan terbaik untuk pertumbuhan bisnis Anda</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Tentang Kami</h4>
+                <p>PT Maha Jaya Pratama adalah leading market dalam Meta Ads di daerah kami. Kami berkomitmen memberikan solusi advertising terbaik untuk pertumbuhan bisnis Anda.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Layanan</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html#services">Facebook Ads</a></li>
+                    <li><a href="index.html#services">Instagram Ads</a></li>
+                    <li><a href="index.html#services">Audience Targeting</a></li>
+                    <li><a href="index.html#services">Performance Analytics</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Tautan</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="privacy.html">Kebijakan Privasi</a></li>
+                    <li><a href="terms.html">Syarat & Ketentuan</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Hubungi Kami</h4>
+                <p>Email: info@mahajayapratama.co.id</p>
+                <p>Telepon: +62 XXX XXX XXXX</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 PT Maha Jaya Pratama. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

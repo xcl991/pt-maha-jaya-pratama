@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kebijakan Privasi - PT Maha Jaya Pratama</title>
+    <meta name="description" content="Kebijakan Privasi PT Maha Jaya Pratama. Ketahui bagaimana kami melindungi data dan privasi Anda dalam layanan Meta Ads kami.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-navy: #0a192f;
+            --secondary-navy: #112240;
+            --accent-navy: #233554;
+            --light-navy: #30475e;
+            --gold-accent: #d4af37;
+            --white: #ffffff;
+            --light-gray: #f8f9fa;
+            --text-dark: #1a1a2e;
+            --text-light: #e6e6e6;
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.8;
+            color: var(--text-dark);
+            background: var(--light-gray);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header Styles */
+        header {
+            background: var(--primary-navy);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+            letter-spacing: 0.5px;
+        }
+
+        .logo span {
+            color: var(--gold-accent);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--gold-accent);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold-accent);
+            transition: var(--transition);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            padding: 4rem 2rem 6rem;
+        }
+
+        .content-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 3px solid var(--primary-navy);
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            color: var(--primary-navy);
+            margin-bottom: 1rem;
+        }
+
+        .page-header p {
+            color: var(--accent-navy);
+            font-size: 1.1rem;
+        }
+
+        .last-updated {
+            text-align: center;
+            color: var(--light-navy);
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        /* Content Sections */
+        h2 {
+            font-size: 1.75rem;
+            color: var(--primary-navy);
+            margin: 2.5rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--gold-accent);
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            color: var(--secondary-navy);
+            margin: 1.5rem 0 0.75rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--accent-navy);
+        }
+
+        ul {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+            color: var(--accent-navy);
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight {
+            color: var(--primary-navy);
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-navy);
+            color: var(--white);
+            padding: 3rem 2rem 1rem;
+            margin-top: auto;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            color: var(--gold-accent);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-section p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold-accent);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--accent-navy);
+        }
+
+        .footer-bottom p {
+            color: var(--text-light);
+            font-size: 0.85rem;
+        }
+
+        /* Mobile Navigation */
+        .mobile-menu {
+            display: none;
+            background: var(--secondary-navy);
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            padding: 1rem 2rem;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-menu ul {
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .content-container {
+                padding: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .mobile-toggle {
+                display: block;
+                background: none;
+                border: none;
+                color: var(--white);
+                font-size: 1.5rem;
+                cursor: pointer;
+            }
+
+            .header-container nav {
+                display: none;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .mobile-toggle {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">PT <span>Maha Jaya Pratama</span></a>
+            <button class="mobile-toggle" onclick="toggleMobileMenu()">☰</button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="index.html#services">Layanan</a></li>
+                    <li><a href="index.html#why-us">Keunggulan</a></li>
+                    <li><a href="index.html#contact">Kontak</a></li>
+                    <li><a href="privacy.html">Privasi</a></li>
+                    <li><a href="terms.html">Syarat & Ketentuan</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="index.html" onclick="toggleMobileMenu()">Beranda</a></li>
+                <li><a href="index.html#services" onclick="toggleMobileMenu()">Layanan</a></li>
+                <li><a href="index.html#why-us" onclick="toggleMobileMenu()">Keunggulan</a></li>
+                <li><a href="index.html#contact" onclick="toggleMobileMenu()">Kontak</a></li>
+                <li><a href="privacy.html" onclick="toggleMobileMenu()">Privasi</a></li>
+                <li><a href="terms.html" onclick="toggleMobileMenu()">Syarat & Ketentuan</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="content-container">
+            <div class="page-header">
+                <h1>Kebijakan Privasi</h1>
+                <p>PT Maha Jaya Pratama berkomitmen untuk melindungi privasi dan data Anda</p>
+            </div>
+
+            <div class="last-updated">
+                Terakhir diperbarui: Januari 2025
+            </div>
+
+            <h2>1. Pendahuluan</h2>
+            <p>Selamat datang di <span class="highlight">PT Maha Jaya Pratama</span>. Kami sangat menghargai kepercayaan Anda terhadap layanan Meta Ads yang kami sediakan. Kebijakan Privasi ini menjelaskan bagaimana kami mengumpulkan, menggunakan, melindungi, dan mengelola informasi pribadi Anda saat menggunakan layanan kami.</p>
+            <p>Dengan mengakses atau menggunakan layanan kami, Anda setuju untuk mematuhi persyaratan yang diuraikan dalam Kebijakan Privasi ini.</p>
+
+            <h2>2. Informasi yang Kami Kumpulkan</h2>
+            <p>Kami dapat mengumpulkan berbagai jenis informasi dari Anda, antara lain:</p>
+            
+            <h3>2.1. Informasi Pribadi</h3>
+            <ul>
+                <li>Nama lengkap dan informasi kontak (email, nomor telepon)</li>
+                <li>Informasi bisnis dan perusahaan</li>
+                <li>Informasi akun media sosial (jika berlaku)</li>
+                <li>Informasi pembayaran dan tagihan</li>
+            </ul>
+
+            <h3>2.2. Informasi Teknis</h3>
+            <ul>
+                <li>Alamat IP dan informasi perangkat</li>
+                <li>Jenis browser dan sistem operasi</li>
+                <li>Data penggunaan website</li>
+                <li>Cookies dan teknologi pelacakan lainnya</li>
+            </ul>
+
+            <h3>2.3. Informasi Kampanye</h3>
+            <ul>
+                <li>Data performa kampanye Meta Ads</li>
+                <li>Audience targeting dan preferensi</li>
+                <li>Budget dan pengeluaran iklan</li>
+                <li>Hasil dan konversi kampanye</li>
+            </ul>
+
+            <h2>3. Cara Kami Menggunakan Informasi Anda</h2>
+            <p><span class="highlight">PT Maha Jaya Pratama</span> menggunakan informasi yang dikumpulkan untuk tujuan-tujuan berikut:</p>
+            
+            <h3>3.1. Penyediaan Layanan</h3>
+            <ul>
+                <li>Mengelola dan mengoptimalkan kampanye Meta Ads Anda</li>
+                <li>Menyediakan analisis dan laporan performa</li>
+                <li>Memberikan rekomendasi strategi advertising</li>
+                <li>Memproses transaksi dan pembayaran</li>
+            </ul>
+
+            <h3>3.2. Komunikasi</h3>
+            <ul>
+                <li>Mengirim update dan informasi penting tentang layanan</li>
+                <li>Menyediakan dukungan teknis dan konsultasi</li>
+                <li>Menanggapi pertanyaan dan permintaan Anda</li>
+                <li>Mengirim promosi dan penawaran khusus (dengan persetujuan)</li>
+            </ul>
+
+            <h3>3.3. Peningkatan Layanan</h3>
+            <ul>
+                <li>Menganalisis tren dan pola penggunaan</li>
+                <li>Mengembangkan fitur dan layanan baru</li>
+                <li>Melakukan penelitian dan analisis pasar</li>
+                <li>Meningkatkan keamanan dan performa sistem</li>
+            </ul>
+
+            <h2>4. Berbagi Informasi</h2>
+            <p>Kami berbagi informasi Anda dalam situasi berikut:</p>
+
+            <h3>4.1. Meta Platforms</h3>
+            <p>Karena layanan kami berfokus pada Meta Ads, informasi tertentu diperlukan untuk diintegrasikan dengan platform Meta (Facebook, Instagram) untuk keperluan kampanye advertising.</p>
+
+            <h3>4.2. Pihak Ketiga Tepercaya</h3>
+            <ul>
+                <li>Penyedia layanan pembayaran</li>
+                <li>Partner teknologi dan analitik</li>
+                <li>Layanan hosting dan keamanan</li>
+            </ul>
+
+            <h3>4.3. Persyaratan Hukum</h3>
+            <p>Kami dapat mengungkapkan informasi jika diperlukan oleh hukum, perintah pengadilan, atau untuk melindungi hak, properti, atau keselamatan kami, pengguna, atau publik.</p>
+
+            <h2>5. Keamanan Data</h2>
+            <p><span class="highlight">PT Maha Jaya Pratama</span> menerapkan standar keamanan yang ketat untuk melindungi informasi Anda:</p>
+            <ul>
+                <li>Enkripsi data saat transmisi dan penyimpanan</li>
+                <li>Pembatasan akses berdasarkan peran</li>
+                <li>Audit keamanan berkala</li>
+                <li>Backup data rutin</li>
+                <li>Protokol respons insiden</li>
+            </ul>
+            <p>Namun, harap diingat bahwa tidak ada metode transmisi melalui internet atau penyimpanan elektronik yang sepenuhnya aman. Kami tidak dapat menjamin keamanan absolut.</p>
+
+            <h2>6. Hak Anda</h2>
+            <p>Sebagai pengguna layanan kami, Anda memiliki hak-hak berikut:</p>
+            <ul>
+                <li><strong>Akses:</strong> Meminta salinan data pribadi yang kami miliki</li>
+                <li><strong>Koreksi:</strong> Memperbarui atau memperbaiki informasi yang tidak akurat</li>
+                <li><strong>Penghapusan:</strong> Meminta penghapusan data pribadi Anda</li>
+                <li><strong>Pembatasan:</strong> Membatasi cara kami menggunakan informasi Anda</li>
+                <li><strong>Portabilitas:</strong> Menerima data Anda dalam format yang terstruktur</li>
+                <li><strong>Penolakan:</strong> Menolak penggunaan data tertentu</li>
+            </ul>
+
+            <h2>7. Cookies dan Teknologi Pelacakan</h2>
+            <p>Kami menggunakan cookies dan teknologi serupa untuk:</p>
+            <ul>
+                <li>Mengingat preferensi dan pengaturan Anda</li>
+                <li>Menganalisis penggunaan website</li>
+                <li>Meningkatkan performa dan fungsionalitas</li>
+                <li>Menyediakan konten yang relevan</li>
+            </ul>
+            <p>Anda dapat mengatur browser untuk menolak cookies, namun ini dapat mempengaruhi fungsionalitas website.</p>
+
+            <h2>8. Retensi Data</h2>
+            <p>Kami menyimpan informasi pribadi Anda selama diperlukan untuk:</p>
+            <ul>
+                <li>Menyediakan layanan yang diminta</li>
+                <li>Mematuhi kewajiban hukum</li>
+                <li>Menyelesaikan sengketa dan penegakan perjanjian</li>
+                <li>Memenuhi kepentingan bisnis yang sah</li>
+            </ul>
+
+            <h2>9. Privasi Anak-anak</h2>
+            <p>Layanan kami tidak ditujukan untuk anak-anak di bawah 18 tahun. Kami tidak dengan sengaja mengumpulkan informasi pribadi dari anak-anak. Jika kami mengetahui bahwa kami telah mengumpulkan informasi dari anak di bawah 18 tahun, kami akan mengambil langkah untuk menghapus informasi tersebut.</p>
+
+            <h2>10. Perubahan pada Kebijakan Privasi</h2>
+            <p><span class="highlight">PT Maha Jaya Pratama</span> berhak mengubah Kebijakan Privasi ini sewaktu-waktu. Perubahan akan diumumkan melalui website. Penggunaan layanan yang berkelanjutan setelah perubahan dianggap sebagai persetujuan terhadap kebijakan yang diperbarui.</p>
+
+            <h2>11. Hubungi Kami</h2>
+            <p>Jika Anda memiliki pertanyaan, komentar, atau kekhawatiran tentang Kebijakan Privasi ini atau praktik privasi kami, silakan hubungi kami:</p>
+            <ul>
+                <li>Email: privacy@mahajayapratama.co.id</li>
+                <li>Telepon: +62 XXX XXX XXXX</li>
+                <li>Alamat: Kantor PT Maha Jaya Pratama</li>
+            </ul>
+
+            <h2>12. Persetujuan</h2>
+            <p>Dengan menggunakan layanan <span class="highlight">PT Maha Jaya Pratama</span>, Anda menyatakan bahwa Anda telah membaca, memahami, dan menyetujui Kebijakan Privasi ini.</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Tentang Kami</h4>
+                <p>PT Maha Jaya Pratama adalah leading market dalam Meta Ads di daerah kami. Kami berkomitmen memberikan solusi advertising terbaik untuk pertumbuhan bisnis Anda.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Layanan</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html#services">Facebook Ads</a></li>
+                    <li><a href="index.html#services">Instagram Ads</a></li>
+                    <li><a href="index.html#services">Audience Targeting</a></li>
+                    <li><a href="index.html#services">Performance Analytics</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Tautan</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="privacy.html">Kebijakan Privasi</a></li>
+                    <li><a href="terms.html">Syarat & Ketentuan</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Hubungi Kami</h4>
+                <p>Email: info@mahajayapratama.co.id</p>
+                <p>Telepon: +62 XXX XXX XXXX</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 PT Maha Jaya Pratama. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
